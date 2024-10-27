@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div style="text-align: center; font-family: sans-serif;" id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+    const list =[{greeting:"Hello", name:"Ahmad"},{greeting:"Namaste", name:"list"},{greeting:"Goodmorning", name:"john"}]
+
+
+
+
+
+    const GreetingCard = (props) =>{
+       const{greeting, name} = props || {}
+        return <div>{'${greeting} - ${name}'}</div>
+    }
+
+    const component = () => {
+        return <div>list.map(item = {
+        const {greeting, name} = item;
+
+            return<GreetingCard geeting={greeting} name={name} />
+
+        
+        
+        })</div>
+
+
+    }
+    ReactDOM.render(<component/>, document.getElementById("root"));
+  </script>
+</html>
